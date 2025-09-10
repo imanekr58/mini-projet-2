@@ -1,22 +1,30 @@
 #include <stdio.h>
 int main () {
-    char  motCache [] = "hello" ;
-    int motAffiche = strlen (motCache) ;
-    printf ("le mot est : %s\n , mot") ;
-char motAffiche [] ; 
-for ( int x = 0 ; motAffiche< x ; x++) {
-motCache [x] ='----- ' ;
+    char  motsecret [] = {'y','o','u','c','o','d','e'} ;
+    int motcache[] = {'-','-','-','-','-','-','-'} ;
+    int taille= sizeof(motsecret)/sizeof(motsecret[0]);
+char lettre; 
+int Letre_trouve = 0;
+int essais = 7;
+int max_essais = 7;
 
-printf (" saisir une laitre : ") ;
-motCache[strlen (mot) ] ='\0' ;
+while (essais > 0 && Letre_trouve <taille){
+    printf("\nmot a deviner : ");
+    for (int  i = 0; i < taille; i++)
+    {printf("saisir une lettre: ");
+        scanf("%c", &lettre);
 
-
-    return 0;
+        int trouve = 0;
+        for(int i = 0; i < taille; i++){
+            if(motsecret[i]== lettre && motcache[i]== '_'){
+                motcache[i]== lettre;
+                trouve = 1;
+                Letre_trouve;
+            }
+        }
+        
+    }
+    
 }
- 
 
-
-
-
-
-}
+    
